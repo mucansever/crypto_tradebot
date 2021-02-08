@@ -7,8 +7,7 @@ import userdata
 
 class User:
     '''
-    Instantiates user from a file with public API key on first, secret key
-    on second line
+    Instantiates user using API keys on userdata.py
     '''
     def __init__(self):
         self.client = self.create_client()
