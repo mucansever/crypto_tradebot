@@ -1,49 +1,49 @@
-from strategy import *
+from strategy import Strategy
 
 class Backtest:
-    def __init__(self, startDate, endDate, balance, strategy: Strategy):
-        self.startDate = startDate
-        self.endDate = endDate
-        self.initialBalance = balance
-        self.updatedBalance = balance
+    def __init__(self, start_date, end_date, balance, strategy: Strategy):
+        self.start_date = start_date
+        self.end_date = end_date
+        self.initial_balance = balance
+        self.updated_balance = balance
         self.strategy = strategy
         self.portfolio = []
-        self.successRate = 0
+        self.success_rate = 0
 
     def run(self):
-        nextOrder = 'BUY'
-        boughtAmount = 0
+        next_order = 'BUY'
+        bought_amount = 0
         totalSells = 0
         signals = self.strategy.getResult()
         for signal in signals:
-            if signal[0] < self.startDate:
+            if signal[0] < self.start_date:
                 continue
-            if signal[0] > self.endDate:
+            if signal[0] > self.end_date:
                 break
 
-            if nextOrder == 'BUY' and signal[2] == 'BUY':
-                nextOrder = 'SELL'
+            if next_order == 'BUY' and signal[2] == 'BUY':
+                next_order = 'SELL'
                 self.portfolio.append([signal[3], 'BUY'])
-                boughtAmount = self.updatedBalance/signal[3]
-                self.updatedBalance = 0
+                bought_amount = self.updated_balance/signal[3]
+                self.updated_balance = 0
 
-            if nextOrder == 'SELL' and signal[2] == 'SELL':
-                nextOrder = 'BUY'
-                buyPrice = self.portfolio[-1][0]
+            if next_order == 'SELL' and signal[2] == 'SELL':
+                next_order = 'BUY'
+                buy_price = self.portfolio[-1][0]
                 self.portfolio.append([signal[3], 'SELL'])
-                self.updatedBalance = boughtAmount*signal[3]
-                boughtAmount = 0
+                self.updated_balance = bought_amount*signal[3]
+                bought_amount = 0
                 totalSells += 1
-                if signal[3] > buyPrice:
-                    self.successRate += 1
+                if signal[3] > buy_price:
+                    self.success_rate += 1
 
-        self.successRate /= totalSells
-        self.updatedBalance = boughtAmount*self.portfolio[-1][0] + self.updatedBalance
+        self.success_rate /= totalSells
+        self.updated_balance = bought_amount*self.portfolio[-1][0] + self.updated_balance
         
     def results(self):
         for item in self.portfolio:
             print(item[1], item[0])
-        print('Initial balance:', self.initialBalance)
-        print('Final balance:', self.updatedBalance)
-        print('Change in percentage:', str(self.updatedBalance/self.initialBalance*100-100) + '%')
-        print('Success rate:', str(self.successRate*100)+'%')
+        print('Initial balance:', self.initial_balance)
+        print('Final balance:', self.updated_balance)
+        print('Change in percentage:', str(self.updated_balance/self.initial_balance*100-100) + '%')
+        print('Success rate:', str(self.success_rate*100)+'%')

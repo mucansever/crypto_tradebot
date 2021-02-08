@@ -1,0 +1,2 @@
+api_public = 'INSERT PUBLIC API KEY HERE'
+api_secret = 'INSERT SECRET API KEY HERE'
