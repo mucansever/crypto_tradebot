@@ -20,5 +20,5 @@ Symbol and runtime arguments are mandatory while --interval and --initial_state 
 ## Note
 Because of the trade limits on Binance API, given account must have at least $20 USD to use the bot on cryptocurrencies such as ETH and BTC. \
 The logic behind strategies I used can be read from following articles:
-- https://www.ig.com/en/trading-strategies/macd-trading-strategy-190610#:~:text=The%20strategy%20is%20to%20buy,the%20signals%20issued%20too%20late.
+- https://www.ig.com/en/trading-strategies/macd-trading-strategy-190610
 - https://medium.com/@sol_98230/rsi-5-basic-strategies-4-steps-how-to-connect-it-to-the-trading-bot-a2aa5bb70f6c
