@@ -1,5 +1,8 @@
 # crypto_tradebot
 A crypto trading bot that runs on Binance
+## What It Does
+This is a trading bot that tries to make money by buying cryptocurrencies from low prices and selling them back from high prices. It's a completely automated product that works without any interference from the user, which can be regarded as a con. \
+It runs on the crypto trading platform Binance, which is currently the highest ranked exchange market on [CoinGecko](https://www.coingecko.com/en/exchanges).
 ## Implementation
 This bot has only one state, either buy or sell, at a time which changes between the two repeatedly. When to buy or sell is determined by the bearish and bullish signals acquired from MACD-MACDsignal line crossovers and how much to buy or sell is determined via the RSI indicator.
 ## Dependencies
@@ -7,7 +10,7 @@ Python 3.7 or above is needed. Required modules can be easily installed via pip 
 ```
 pip install -r requirements.txt
 ```
-You'll also need a set of binance API keys and update userdata.py with those respectively. If you don't have one already, steps on following article can be followed: https://www.binance.com/en/support/faq/360002502072-How-to-create-API
+You'll also need a set of binance API keys and update userdata.py with those respectively. If you don't have one already, steps on [this article](https://www.binance.com/en/support/faq/360002502072-How-to-create-API) can be followed.
 ## Usage
 ```
 python3 main.py <symbol> <runtime> --interval [OPTIONAL] --initial_state [OPTIONAL]
