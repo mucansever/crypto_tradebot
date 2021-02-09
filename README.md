@@ -21,7 +21,7 @@ Symbol and runtime arguments are mandatory while --interval and --initial_state 
 - Interval argument is the interval of klines, its format is same as runtime.
 - Initial state argument is either 'BUY' or 'SELL', specifying the first operation to be performed.
 ## Note
-Because of the trade limits on Binance API, given account must have at least $20 USD to use the bot on cryptocurrencies such as ETH and BTC. \
+Because of the trade limits on Binance API, given account must have at least $20 USD to be able to use the bot on cryptocurrencies such as ETH and BTC, I don't have any knowledge on limits of others. \
 The logic behind strategies used on this bot can be read from following articles:
 - https://www.ig.com/en/trading-strategies/macd-trading-strategy-190610
 - https://medium.com/@sol_98230/rsi-5-basic-strategies-4-steps-how-to-connect-it-to-the-trading-bot-a2aa5bb70f6c
