@@ -25,4 +25,4 @@ The logic behind strategies used on this bot can be read from following articles
 ## Future Improvements
 'strategy.py' to be reorganized. \
 Better error handling. \
-Plotting indicators on runtime. \
+Plotting indicators on runtime.
