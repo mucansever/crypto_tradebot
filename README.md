@@ -1,4 +1,4 @@
-# crypto_tradebot
+# Crypto Tradebot
 A crypto trading bot that runs on Binance
 ## Install dependencies
 ```
