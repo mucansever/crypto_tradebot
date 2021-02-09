@@ -8,5 +8,5 @@ pip install -r requirements.txt
 ```
 python3 main.py <symbol> <runtime> --interval [OPTIONAL] --initial_state [OPTIONAL]
 ```
-## How bot works
+## How it works
 It has one state(either buy or sell) at a time which changes between the two repeatedly. When to buy/sell is determined by bearish and bullish signals acquired from MACD-MACDsignal line crossovers and how much to buy/sell is determined using the RSI indicator.
