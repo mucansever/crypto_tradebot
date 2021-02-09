@@ -26,6 +26,6 @@ The logic behind strategies used on this bot can be read from following articles
 - https://www.ig.com/en/trading-strategies/macd-trading-strategy-190610
 - https://medium.com/@sol_98230/rsi-5-basic-strategies-4-steps-how-to-connect-it-to-the-trading-bot-a2aa5bb70f6c
 ## Future Improvements
-- 'strategy.py' to be reorganized. 
+- `strategy.py` to be reorganized. 
 - Better error handling. 
 - Plotting indicators on runtime.
