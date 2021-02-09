@@ -5,7 +5,7 @@ A crypto trading bot that runs on Binance
 pip install -r requirements.txt
 ```
 ## How to run
-Update API key information on userdata.py
+Before running, update API key information on userdata.py
 ```
 python3 main.py <symbol> <runtime> --interval [OPTIONAL] --initial_state [OPTIONAL]
 ```
