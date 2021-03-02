@@ -1,6 +1,10 @@
 from strategy import Strategy
 
 class Backtest:
+    '''
+    Backtest given strategy using historical data with specified start and end dates.
+    Strategy object with dataset needs to be created beforehand.
+    '''
     def __init__(self, start_date, end_date, balance, strategy: Strategy):
         self.start_date = start_date
         self.end_date = end_date
@@ -10,6 +14,11 @@ class Backtest:
         self.portfolio = []
         self.success_rate = 0
 
+    '''
+    Run the backtest. 
+    Starts from BUY state and buys/sells at the first signal, repeats this 
+    process for all data in dataset.
+    '''
     def run(self):
         next_order = 'BUY'
         bought_amount = 0
@@ -40,6 +49,10 @@ class Backtest:
         self.success_rate /= totalSells
         self.updated_balance = bought_amount*self.portfolio[-1][0] + self.updated_balance
         
+    '''
+    Print final results of the backtesting.
+    Must be used after .run()
+    '''
     def results(self):
         for item in self.portfolio:
             print(item[1], item[0])
