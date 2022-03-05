@@ -1,12 +1,12 @@
 # crypto_tradebot
 A crypto trading bot that runs on Binance
-![alt text](https://i.ibb.co/k9K4ptX/macd-plot.jpg)
-(Green and red points denote buy and sell respectively.)
 ## What It Does
 This is a trading bot that tries to make money by buying cryptocurrencies at low prices and selling them back at high prices. It's a completely automated product that works without any interference from the user, which can be regarded as a con. It tops up BNB automatically to pay for trade fees with a lower rate. \
 It runs on the crypto trading platform Binance, which is currently the highest ranked exchange market on [CoinGecko](https://www.coingecko.com/en/exchanges).
 ## Implementation
 This bot has only one state, either buy or sell, at a time which changes between the two repeatedly. When to buy or sell is determined by the bearish and bullish signals acquired from MACD-MACDsignal line crossovers and how much to buy or sell is determined via the RSI indicator.
+![alt text](https://i.ibb.co/k9K4ptX/macd-plot.jpg)
+(Green and red points denote buy and sell respectively.)
 ## Dependencies
 Python 3.7 or above is needed. Required modules can be easily installed via pip as follows:
 ```
